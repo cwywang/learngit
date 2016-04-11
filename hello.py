@@ -5,5 +5,8 @@ manager=Manager(App)
 @App.route('/')
 def index():
     return render_template('first.html')
+@App.route('/樊恩华')
+def index():
+    return render_template('index.html')
 if __name__=='__main__':
     manager.run()
