@@ -7,6 +7,6 @@ def first():
     return render_template('first.html')
 @App.route('/樊恩华')
 def index():
-    return app.send_static_file('index.html')
+    return App.send_static_file('index.html')
 if __name__=='__main__':
     manager.run()
