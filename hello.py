@@ -3,7 +3,7 @@ from flask.ext.script import Manager
 App=Flask(__name__)
 manager=Manager(App)
 @App.route('/')
-def index():
+def first():
     return render_template('first.html')
 @App.route('/樊恩华')
 def index():
