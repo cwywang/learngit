@@ -5,8 +5,8 @@ manager=Manager(App)
 @App.route('/')
 def first():
     return render_template('first.html')
-@App.route('/樊恩华')
-def index():
-    return render_template('index.html')
+@App.route('/凡恩华')
+def time():
+    return render_template('time.html')
 if __name__=='__main__':
     manager.run()
