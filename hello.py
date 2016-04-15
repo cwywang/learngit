@@ -17,6 +17,6 @@ def time():
     return render_template('time.html')
 @App.route('/刘鹏')
 def love():
-    return render_template('love.html')
+    return render_template('love.htm')
 if __name__=='__main__':
 	App.run()
