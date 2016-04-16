@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Friends</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">	
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="static/樊恩华/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="static/樊恩华/css/style.css" rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,100,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="static/樊恩华/js/jquery-1.10.2.min.js"></script>  
+<!---- start-smooth-scrolling---->
+<script type="text/javascript" src="static/樊恩华/js/move-top.js"></script>
+<script type="text/javascript" src="static/樊恩华/js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!---end-smooth-scrolling-->
+<!--start-top-nav-script-->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+<!--End-top-nav-script-->
+</head>
+<body>
+	<!--start-header-->
+				<div id="home" class="banner">
+					<div class="header">
+						<div class="container">
+							<div class="logo">
+								<a href="#"><img src="static/樊恩华/images/logo.png" alt=""></a>  
+							</div>
+							<!--start-top-nav-->
+							 <nav class="top-nav">
+								<ul class="top-nav">
+									<li><a href="#">主页</a></li>&nbsp;/
+									<li><a href="#us">关于我们</a></li>&nbsp;/
+									<li><a href="#">彩蛋</a></li>&nbsp;/
+									<li><a href="#">HADNONE</a></li>
+								</ul>
+								<a href="#" id="pull"><img src="static/樊恩华/images/menu-icon.png" title="menu" /></a>
+							</nav>
+							<div class="clearfix"> </div>
+						</div>
+				</div>
+				<div class="banner-text">
+					<div  id="top" class="callbacks_container">
+			      		<ul class="rslides" id="slider4">
+			        	<li>
+							<div class="banner-top">
+								<h1>这绵长又绵长的岁月</br>又能改变什么呢</h1>	
+								<div class="bttn">
+									<a href="#">Read more</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="banner-top">
+								<h1>你们美好,但不自知</br></br></h1>	
+								<div class="bttn">
+									<a href="#">Read more</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="banner-top">
+								<h1>那些狗都不愿意听的笑话</br>只有你们愿意听</br></h1>	
+								<div class="bttn">
+									<a href="#">Read more</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="banner-top">
+								<h1>真是可怕的年轻人</br></br></h1>	
+								<div class="bttn">
+									<a href="#">Read more</a>
+								</div>
+							</div>
+						</li>
+			      </ul>
+			    </div>
+			    <div class="clearfix"></div>
+				</div>
+			</div>
+		<!--End-header-->
+		<!--Slider-Starts-Here-->
+				<script src="static/樊恩华/js/responsiveslides.min.js"></script>
+			 <script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager: true,
+			        nav: true,
+			        speed: 600,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+			
+			    });
+			  </script>
+			<audio height="0" width="0" autoplay='true'>
+				  <source src="static/樊恩华/mp3/fly.mp3" type="audio/mp3" />
+				  <source src="static/樊恩华/mp3/fly.ogg" type="audio/ogg" />
+				  <embed height="0" width="0" src="static/樊恩华/mp3/fly.mp3" />
+			</audio>
+			<!--End-slider-script-->
+			<!--about-starts-->
+			<div class="time">
+				<div class="container">
+					<div class="time-top">
+						<h3>那一年我二十一岁，在我一生的黄金时代</br>
+							我有好多奢望。我想爱，想吃</br>
+							还想在一瞬间变成天上半明半暗的云</h3>
+						<p></p>
+					</div>
+					<div class="time-bottom">
+						<div class="col-md-4 about-bottom-one">
+							<span class="time-one"></span>
+						</div>
+						<div class="col-md-4 about-bottom-one">
+							<span class="time-two"></span>
+						</div>
+						<div class="col-md-4 about-bottom-one">
+							<span class="time-tre"></span>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<!--End-about-->
+			<!--starts-dhavan-->
+			<div id="us" class="dhavan">
+				<div class="container">
+					<div  id="top" class="callbacks_container">
+			      		<ul class="rslides" id="slider5">
+			      			<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image1.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>邓悦歌</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p>那是一种更深层次的父爱，因为想给孩子的内心种下善意的种子</br></br>
+									独自承担着这来自黑暗世界的恶意。
+									</br></br>(这是我在邓悦歌面前装逼的话，是对电影(美丽人生)的影评
+									</br></br></p>
+							</div>
+							</li>
+			        		<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image1.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>邓悦歌</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p>那是一种更深层次的父爱，因为想给孩子的内心种下善意的种子</br></br>
+									独自承担着这来自黑暗世界的恶意。
+									</br></br>(这是我在邓悦歌面前装逼的话，是对电影(美丽人生)的影评
+									</br></br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image2.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>刘华</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p>--刘华，我给你说个事</br>
+								   --哎呀，是的啊</br></br>
+								   --刘华，trust me</br>
+								   --啥子啊？爪死你啊？</br>
+								   -- .........</br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image2.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>刘华</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p>--刘华，我给你说个事</br>
+								   --哎呀，是的啊</br></br>
+								   --刘华，trust me</br>
+								   --啥子啊？爪死你啊？</br>
+								   -- .........</br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image3.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>欢欢</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p>曾经有一个胖胖的女生，惊艳了我</br></br>我知道当我说出了这句话，我不会有好下场。</br></br>
+								   但是我不怕</br></br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image3.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>欢欢</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p>曾经有一个胖胖的女生，惊艳了我</br></br>我知道当我说出了这句话，我不会有好下场。</br></br>
+								   但是我不怕</br></br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image4.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>刘鹏</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p>牛棚跟大屌,我一想到这个两个名字。我就觉得很污。</br></br>
+									因为我老是觉得大屌要在牛棚搞点事。</br></br>
+									真是可怕的年轻人</br></br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image4.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>刘鹏</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p>牛棚跟大屌,我一想到这个两个名字。我就觉得很污。</br></br>
+									因为我老是觉得大屌要在牛棚搞点事。</br></br>
+									真是可怕的年轻人</br></br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image5.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>娟娟</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p>我依然记得那一个晚上，一个带着高原红的女子</br></br>
+									那一首《狼牙棒》。我知道，这一夜我会失眠</br></br></br></br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image5.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>娟娟</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p>我依然记得那一个晚上，一个带着高原红的女子</br></br>
+									那一首《狼牙棒》。我知道，这一夜我会失眠</br></br></br></br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image6.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>贺浪</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom"> 
+								<p>当贺浪说出那句“我的网吧是不会有小学生的”时候，这声音久久的回荡在我的心间，敲击着我的神经</br>
+								我感到我的心中充满了罪孽，我似乎看到一个高傲的不屈的灵魂在我的面前</br>这不为利益所驱动的人格，这高尚的情操让我想起了四个字：你真逗。</br>
+								这一句掷地有声，这一身茫然正气，这一副铁骨铮铮，这让我自惭形秽</br>我想起那个写保尔的斯基说的那句：我想起那天夕阳下的奔跑，那是我逝去的青春。</br></br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image6.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>贺浪</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom"> 
+								<p>当贺浪说出那句“我的网吧是不会有小学生的”时候，这声音久久的回荡在我的心间，敲击着我的神经</br>
+								我感到我的心中充满了罪孽，我似乎看到一个高傲的不屈的灵魂在我的面前</br>这不为利益所驱动的人格，这高尚的情操让我想起了四个字：你真逗。</br>
+								这一句掷地有声，这一身茫然正气，这一副铁骨铮铮，这让我自惭形秽</br>我想起那个写保尔的斯基说的那句：我想起那天夕阳下的奔跑，那是我逝去的青春。</br></br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image6.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>贺浪</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom"> 
+								<p>当贺浪说出那句“我的网吧是不会有小学生的”时候，这声音久久的回荡在我的心间，敲击着我的神经</br>
+								我感到我的心中充满了罪孽，我似乎看到一个高傲的不屈的灵魂在我的面前</br>这不为利益所驱动的人格，这高尚的情操让我想起了四个字：你真逗。</br>
+								这一句掷地有声，这一身茫然正气，这一副铁骨铮铮，这让我自惭形秽</br>我想起那个写保尔的斯基说的那句：我想起那天夕阳下的奔跑，那是我逝去的青春。</br></br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image6.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>贺浪</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom"> 
+								<p>当贺浪说出那句“我的网吧是不会有小学生的”时候，这声音久久的回荡在我的心间，敲击着我的神经</br>
+								我感到我的心中充满了罪孽，我似乎看到一个高傲的不屈的灵魂在我的面前</br>这不为利益所驱动的人格，这高尚的情操让我想起了四个字：你真逗。</br>
+								这一句掷地有声，这一身茫然正气，这一副铁骨铮铮，这让我自惭形秽</br>我想起那个写保尔的斯基说的那句：我想起那天夕阳下的奔跑，那是我逝去的青春。</br></br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image7.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>吴浩</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="dhavan-bottom">
+								<p>从前张洪铠讲过一个故事:</br>他遇到一个人，这个人曾经面对别人的质问</br>他却能坦荡回应："我不是好色，我只是欣赏美而已"</br>
+								从此我记住了这个桀骜不驯的少年。</br></br></br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image7.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>吴浩</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="dhavan-bottom">
+								<p>从前张洪铠讲过一个故事:</br>他遇到一个人，这个人曾经面对别人的质问</br>他却能坦荡回应："我不是好色，我只是欣赏美而已"</br>
+								从此我记住了这个桀骜不驯的少年。</br></br></br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image8.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>张洪铠</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p>我从未遗忘打野大神HLKN在云阳外国语野区打死了野区小怪尤溪杀破浪
+								</br></br>但是我怕没人教我怎么玩</br></br></br></br></p>
+							</div>
+							</li><li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image8.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>张洪铠</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p>我从未遗忘打野大神HLKN在云阳外国语野区打死了野区小怪尤溪杀破浪
+								</br></br>但是我怕没人教我怎么玩</br></br></br></br></p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image9.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>凡恩华</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p style="text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我就是我,是不一样的烟火</p>
+								<p>
+									胖子  - -吴浩</br></br>
+									哎呀是的啊   - -刘华</br></br>
+									死都不减肥的批话多的但是又缺他不可的死胖子  - -Yokedeng</br></br>
+								</p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image9.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>凡恩华</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p style="text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我就是我,是不一样的烟火</p>
+								<p>
+									胖子  - -吴浩</br></br>
+									哎呀是的啊   - -刘华</br></br>
+									死都不减肥的批话多的但是又缺他不可的死胖子  - -Yokedeng</br></br>
+								</p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image9.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>凡恩华</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p style="text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我就是我,是不一样的烟火</p>
+								<p> 屌大太屌  - -刘鹏</br></br>
+									明骚易躲，暗贱难防  - -欢欢</br></br>
+									你的热情，好像一把火，燃烧了整个沙漠。 - -娟娟</br></br>
+								</p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image9.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>凡恩华</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p style="text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我就是我,是不一样的烟火</p>
+								<p> 屌大太屌  - -刘鹏</br></br>
+									明骚易躲，暗贱难防  - -欢欢</br></br>
+									你的热情，好像一把火，燃烧了整个沙漠。 - -娟娟</br></br>
+								</p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image9.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>凡恩华</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p style="text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我就是我,是不一样的烟火</p>
+								<p> 你叫我多读书,我做了。之后,我学会了装逼 - -一个很帅的人</br></br>
+									话多，经常get不到你的点，但是对待朋友这些还是蛮真诚的 - -HLKN</br></br>
+								</p>
+							</div>
+							</li>
+							<li>
+							<div class="dhavan-top">
+								<div class="dhavan-left">
+									<img src="static/樊恩华/images/image9.jpg" alt="">
+								</div>
+								<div class="dhavan-right">
+									<h3>凡恩华</h3>
+									<img src="static/樊恩华/images/quots.png" alt="">
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="dhavan-bottom">
+								<p style="text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我就是我,是不一样的烟火</p>
+								<p>
+									你叫我多读书,我做了。之后,我学会了装逼 - -一个很帅的人</br></br>
+									话多，经常get不到你的点，但是对待朋友这些还是蛮真诚的 - -HLKN</br></br>
+								</p>
+							</div>
+							</li>
+			      		</ul>
+			    	</div>
+			   		<div class="clearfix"> </div>
+				</div>
+			</div>
+			<!--End-dhavan-->
+			<!--Slider-Starts-Here-->
+				<script src="static/樊恩华/js/responsiveslides.min.js"></script>
+				<script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider5").responsiveSlides({
+			        auto: true,
+			        pager: true,
+			        nav: true,
+			        speed: 400,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+			
+			    });
+			  </script>
+			<!--End-slider-script-->
+			<!--starts-contact-->
+			
+			<!--End-contact-->
+			<!--starts-footer-->
+			<div class="footer">
+				<div class="container">
+					<div class="footer-main">
+						<p>&copy 2016-speak by <a href="http://www.hadnone.com/">hadNone</a></p>
+					</div>
+				</div>
+				<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+					<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+			</div>
+			<!--End-footer-->
+</body>
+</html>
