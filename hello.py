@@ -4,7 +4,7 @@ import re
 App=Flask(__name__)
 @App.route('/')
 def first():
-    return render_template('first.html')
+    return render_template('hadNone/first.html')
 @App.route('/樊恩华_Readmore')
 def about():
     if(re.match(".*iPhone.*",request.headers.get('User-Agent')) or re.match(".*Android.*",request.headers.get('User-Agent'))):
