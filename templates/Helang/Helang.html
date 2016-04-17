@@ -25,11 +25,14 @@
     	4
     
 </div>
-<audio height="0" width="0" autoplay='true'>
+<audio id="bgaudio" height="0" width="0" autoplay='true'>
                   <source src="static/Helang/have.mp3" type="audio/mp3" />
                   <source src="static/Helang/have.ogg" type="audio/ogg" />
                   <embed height="0" width="0" src="static/Helang/have.ogg" />
 </audio>
+<script type=" text/javascript">
+        document.getElementById('bgaudio').play();
+    </script>
 <input type="hidden" id = "loveDate" value='2016-03-30 00:00:00' >
 <div id="main">
   <div id="error">你的浏览器无法显示HTML5的内容哦，请换成谷歌或火狐等浏览器</div>
