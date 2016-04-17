@@ -62,10 +62,14 @@
 			</div>
 		</div>
 	</div>
-	<audio height="0" width="0" autoplay='true'>
+	<audio id="bgaudio" height="0" width="0" autoplay='true'>
                   <source src="static/Liupeng/have.mp3" type="audio/mp3" />
                   <source src="static/Liupeng/have.ogg" type="audio/ogg" />
                   <embed height="0" width="0" src="static/Liupeng/have.ogg" />
+    </audio>
+    <script type="text/javascript">
+		document.getElementById('bgaudio').play();
+	</script>
 	<script type="text/javascript">
 		var offsetX = $("#loveHeart").width() / 2;
 		var offsetY = $("#loveHeart").height() / 2 - 55;
