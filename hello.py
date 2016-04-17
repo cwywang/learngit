@@ -22,7 +22,7 @@ def time():
     return render_template('Fanenhua/time.html')
 @App.route('/刘鹏')
 def Liupeng():
-    return render_template('Liupeng/Liupeng.htm')
+    return render_template('Liupeng/Liupeng.html')
 @App.route('/贺浪')
 def Helang():
     if(re.match(".*iPhone.*",request.headers.get('User-Agent')) or re.match(".*Android.*",request.headers.get('User-Agent'))):
