@@ -22,20 +22,21 @@ def time():
     return render_template('Fanenhua/time.html')
 @App.route('/刘鹏',methods=['GET','POST'])
 def Liupeng():
-    print(request.method)
     if request.method == 'POST':
         if request.form['password']=='5201314':
             return redirect(url_for('Liupeng_'))
     return render_template('Login/Login.html')
 @App.route('/刘鹏_',methods=['GET','POST'])
 def Liupeng_():
-    print(request.method)
+    return render_template('Liupeng/Liupeng.html')
+@App.route('/贺浪',methods=['GET','POST'])
+def Helang():
     if request.method == 'POST':
         if request.form['password']=='5201314':
-            return redirect(url_for('Helang'))
+            return redirect(url_for('Helang_'))
     return render_template('Login/Login.html')
-@App.route('/贺浪')
-def Helang():
+@App.route('/贺浪_')
+def Helang_():
     return render_template('Helang/Helang.html')
 if __name__=='__main__':
     App.run()
