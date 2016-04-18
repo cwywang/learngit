@@ -25,6 +25,13 @@ def Liupeng():
     print(request.method)
     if request.method == 'POST':
         if request.form['password']=='5201314':
+            return redirect(url_for('Liupeng_'))
+    return render_template('Login/Login.html')
+@App.route('/刘鹏_',methods=['GET','POST'])
+def Liupeng_():
+    print(request.method)
+    if request.method == 'POST':
+        if request.form['password']=='5201314':
             return redirect(url_for('Helang'))
     return render_template('Login/Login.html')
 @App.route('/贺浪')
