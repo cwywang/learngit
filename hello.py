@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,redirect,url_for
 from flask.ext.script import Manager
 import re
 App=Flask(__name__)
@@ -29,4 +29,4 @@ def Liupeng():
 def Helang():
     return render_template('Helang/Helang.html')
 if __name__=='__main__':
-	App.run()
+    App.run()
