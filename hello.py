@@ -22,7 +22,7 @@ def time():
 @App.route('/刘鹏',methods=['GET','POST'])
 def Liupeng():
     if request.method == 'POST':
-        if request.form.get('5201314','default value'):
+        if request.form.get('5201314','default value')=='5201314':
             return redirect(url_for('Helang'))
     return render_template('Login/Login.html')
 @App.route('/贺浪')
