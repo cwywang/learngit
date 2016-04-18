@@ -23,7 +23,7 @@ def time():
 def Liupeng():
     if request.form['password'] == '5201314':
         return redirect(url_for('Helang'))
-    return render_template('Login/Login.html')
+    return render_template('Helang/Helang.html')
 @App.route('/贺浪')
 def Helang():
     return render_template('Helang/Helang.html')
