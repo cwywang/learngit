@@ -20,9 +20,11 @@ def time():
     if(re.match(".*iPhone.*",request.headers.get('User-Agent')) or re.match(".*Android.*",request.headers.get('User-Agent'))):
         return "<h1>暂时无法登录凡恩华的个人网站 </br></h1><h1>hadNone团队正在修复手机端，请登录电脑查看网页！</h1>"
     return render_template('Fanenhua/time.html')
-@App.route('/刘鹏')
+@App.route('/刘鹏',method=['GET','POST'])
 def Liupeng():
-    return render_template('Liupeng/Liupeng.html')
+    if request.form['password'] == '5201314':
+        return redirect(url_for('Helang'))
+    return render_template('Login/Login.html')
 @App.route('/贺浪')
 def Helang():
     return render_template('Helang/Helang.html')
