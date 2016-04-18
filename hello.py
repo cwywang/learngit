@@ -1,4 +1,5 @@
 from flask import Flask,render_template,request,redirect,url_for
+from flask.ext.wtf import Form
 import re
 App=Flask(__name__)
 @App.route('/')
@@ -21,6 +22,7 @@ def time():
     return render_template('Fanenhua/time.html')
 @App.route('/刘鹏',methods=['GET','POST'])
 def Liupeng():
+    form=Form()
     if form.validate_on_submit():
         if form.name.data=='5201314':
             return redirect(url_for('Helang'))
