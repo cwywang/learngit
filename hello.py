@@ -22,7 +22,7 @@ def time():
     return render_template('Fanenhua/time.html')
 @App.route('/刘鹏',methods=['GET','POST'])
 def Liupeng():
-    if request.method == 'POST':
+    if request.method != 'POST':
         return redirect(url_for('Helang'))
     return render_template('Login/Login.html')
 @App.route('/贺浪')
