@@ -38,5 +38,8 @@ def Helang():
 @App.route('/贺浪_')
 def Helang_():
     return render_template('Helang/Helang.html')
+@App.route('/mb1')
+def Helang_():
+    return render_template('mb1_image/mb1.html')
 if __name__=='__main__':
     App.run()
