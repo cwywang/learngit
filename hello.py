@@ -38,6 +38,15 @@ def Helang():
 @App.route('/贺浪_')
 def Helang_():
     return render_template('Helang/Helang.html')
+@App.route('/鸽子',methods=['GET','POST'])
+def Gezi():
+    if request.method == 'POST':
+        if request.form['password']=='20131006':
+            return redirect(url_for('Gezi_'))
+    return render_template('Login/Login.html')
+@App.route('/鸽子_')
+def Gezi_():
+    return render_template('Gezi/Gezi.html')
 @App.route('/mb1')
 def mb1():
     return render_template('mb1_image/mb1.html')
