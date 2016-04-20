@@ -29,15 +29,6 @@ def Liupeng():
 @App.route('/刘鹏_',methods=['GET','POST'])
 def Liupeng_():
     return render_template('Liupeng/Liupeng.html')
-@App.route('/贺浪',methods=['GET','POST'])
-def Helang():
-    if request.method == 'POST':
-        if request.form['password']=='5201314':
-            return redirect(url_for('Helang_'))
-    return render_template('Login/Login.html',password='password')
-@App.route('/贺浪_')
-def Helang_():
-    return render_template('Helang/Helang.html')
 @App.route('/鸽子',methods=['GET','POST'])
 def Gezi():
     if request.method == 'POST':
