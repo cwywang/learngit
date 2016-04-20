@@ -31,7 +31,7 @@ def Gezi():
     if request.method == 'POST':
         if request.form['password']=='20131006':
             return redirect(url_for('Gezi_'))
-    return render_template('mb4_login/mb4_login.html',password='平平淡淡')
+    return render_template('mb4_login/mb4_login.html',password='简简单单,平平淡淡')
 @App.route('/鸽子_')
 def Gezi_():
     return render_template('mb3_tree/mb3_tree.html')
