@@ -1,7 +1,18 @@
 from flask import Flask,render_template,request,redirect,url_for
-from flask.ext.wtf import Form
+from flask.ext.wtf import Form,Mail
+from flask.ext.mail import Message
 import re
+import os
 App=Flask(__name__)
+App.config['MAIL_SERVER']='smtp.aliyun.com'
+App.config['MAIL_PORT']=25
+App.config['MAIL_USE_TLS']=True
+App.config['MAIL_USERNAME']=os.environ.get('MAIL_USERNAME')
+App.config['MAIL_PASSWORD']=os.environ.get('MAIL_PASSWORD')
+mail=Mail(App)
+msg=Message('test subject',sender='741077081@qq.com',recipients=['741077081@qq.com'])
+msg.body='test body'
+msg.html='<b>HTML</b> body'
 @App.route('/樊恩华_us')
 def us():
     if(re.match(".*iPhone.*",request.headers.get('User-Agent')) or re.match(".*Android.*",request.headers.get('User-Agent'))):
@@ -34,6 +45,8 @@ def Gezi():
     return render_template('mb4_login/mb4_login.html',password='简简单单,平平淡淡')
 @App.route('/鸽子_')
 def Gezi_():
+    with App.app_context():
+        mail.send(msg)
     return render_template('mb3_tree/mb3_tree.html')
 @App.route('/mb1')
 def mb1():
