@@ -1,10 +1,18 @@
 from flask import Flask,render_template,request,redirect,url_for
 from flask.ext.wtf import Form
-#from flask.ext.mail import Message,Mail
+from flask.ext.mail import Message,Mail
 import re
 import os
 App=Flask(__name__)
 
+App.config['FLASK_MAIL_SUBJECT_PREFIX']='[FLASKY]'
+App.config['FLASK_MAIL_SENDER']='Flasky Admin <postmaster@doforyou.gift>'
+
+App.config['MAIL_SERVER']='smtp.aliyun.com'
+App.config['MAIL_PORT']=25
+App.config['MAIL_USERNAME']=os.environ.get('MAIL_USERNAME')
+App.config['MAIL_PASSWORD']=os.environ.get('MAIL_PASSWORD')
+mail=Mail(App)
 @App.route('/樊恩华_us')
 def us():
     if(re.match(".*iPhone.*",request.headers.get('User-Agent')) or re.match(".*Android.*",request.headers.get('User-Agent'))):
