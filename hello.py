@@ -14,9 +14,6 @@ App.config['MAIL_USE_TLS']=True
 App.config['MAIL_USERNAME']=os.environ.get('MAIL_USERNAME')
 App.config['MAIL_PASSWORD']=os.environ.get('MAIL_PASSWORD')
 mail=Mail(App)
-msg=Message('test subject',sender='741077081@qq.com',recipients=['741077081@qq.com'])
-msg.body='test body'
-msg.html='<b>HTML</b> body'
 @App.route('/樊恩华_us')
 def us():
     if(re.match(".*iPhone.*",request.headers.get('User-Agent')) or re.match(".*Android.*",request.headers.get('User-Agent'))):
