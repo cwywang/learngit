@@ -2,17 +2,8 @@ from flask import Flask,render_template,request,redirect,url_for
 from flask.ext.wtf import Form
 from flask.ext.mail import Message,Mail
 import re
-import os
 App=Flask(__name__)
 
-App.config['FLASK_MAIL_SUBJECT_PREFIX']='[FLASKY]'
-App.config['FLASK_MAIL_SENDER']='Flasky Admin <postmaster@doforyou.gift>'
-
-App.config['MAIL_SERVER']='smtp.aliyun.com'
-App.config['MAIL_PORT']=25
-App.config['MAIL_USERNAME']=os.environ.get('MAIL_USERNAME')
-App.config['MAIL_PASSWORD']=os.environ.get('MAIL_PASSWORD')
-mail=Mail(App)
 @App.route('/樊恩华_us')
 def us():
     if(re.match(".*iPhone.*",request.headers.get('User-Agent')) or re.match(".*Android.*",request.headers.get('User-Agent'))):
@@ -45,15 +36,9 @@ def Gezi():
     return render_template('mb4_login/mb4_login.html',password='简简单单,平平淡淡')
 @App.route('/鸽子_')
 def Gezi_():
-    send_eamil(App.config['FLASKY_ADMIN'],'NEW YEAR','mail/new_user',user='12345678')
     return render_template('mb3_tree/mb3_tree.html')
 @App.route('/mb1')
 def mb1():
     return render_template('mb1_image/mb1_image.html')
-def send_eamil(to,subject,template,**kwargs):
-    msg=Message(App.config['FLASK_MAIL_SUBJECT_PREFIX']+subject,sender=App.config['FLASK_MAIL_SENDER'],recipients=[to])
-    msg.body=render_template(template+".txt",**kwargs)
-    msg.html=render_template(template+".html",**kwargs)
-    mail.send(msg)
 if __name__=='__main__':
     App.run()
