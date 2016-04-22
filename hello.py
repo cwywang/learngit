@@ -1,9 +1,8 @@
 from flask import Flask,render_template,request,redirect,url_for
 from flask.ext.wtf import Form
-from flask_mail import Message,Mail
+#from flask_mail import Message,Mail
 import re
 App=Flask(__name__)
-
 @App.route('/樊恩华_us')
 def us():
     if(re.match(".*iPhone.*",request.headers.get('User-Agent')) or re.match(".*Android.*",request.headers.get('User-Agent'))):
