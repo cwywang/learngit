@@ -1,6 +1,6 @@
 from flask import Flask,render_template,request,redirect,url_for
 from flask.ext.wtf import Form
-#from flask.ext.mail import Message,Mail
+from flask_mail import Message,Mail
 import re
 App=Flask(__name__)
 
