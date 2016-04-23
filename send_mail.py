@@ -7,10 +7,10 @@ class Send_Mail():
         self.password=password
         self.smtp_server = "smtpdm.aliyun.com"
     def send(self,to_addr):
-        msg = MIMEText('测试邮件内容', 'plain', 'utf-8')
+        msg = MIMEText('访问通知', 'plain', 'utf-8')
         msg['From'] =self.from_addr
         msg['To'] =to_addr
-        msg['Subject'] = Header(u'测试邮件', 'utf-8').encode()
+        msg['Subject'] = Header(u'有人访问你的专属天使了.', 'utf-8').encode()
         server = smtplib.SMTP(self.smtp_server, 25)
         server.set_debuglevel(1)
         server.login(self.from_addr, self.password)
