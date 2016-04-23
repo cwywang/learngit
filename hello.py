@@ -1,13 +1,9 @@
 from flask import Flask,render_template,request,redirect,url_for
 from flask.ext.wtf import Form
-from flask.ext.mail import Mail
 import re
+from send_mail import Send_Mail
 App=Flask(__name__)
-App.config['MAIL_SERVER']='smtp.aliyun.com'
-App.config['MAIL_PORT']=25
-App.config['MAIL_USERNAME']='postmaster@doforyou.gift'
-App.config['MAIL_PASSWORD']='Aa741077081'
-mail=Mail(App)
+mail=Send_Mail('system@email.doforyou.gift','Aa741077081')
 @App.route('/樊恩华_us')
 def us():
     if(re.match(".*iPhone.*",request.headers.get('User-Agent')) or re.match(".*Android.*",request.headers.get('User-Agent'))):
@@ -40,6 +36,7 @@ def Gezi():
     return render_template('mb4_login/mb4_login.html',password='简简单单,平平淡淡')
 @App.route('/鸽子_')
 def Gezi_():
+    mail.send('404451944@qq.com')
     return render_template('mb3_tree/mb3_tree.html')
 @App.route('/mb1')
 def mb1():
